@@ -19,8 +19,8 @@ XXXXXXX = KC.NO
 RAISE = KC.MO(3)
 MEDIAS = KC.TG(4)
 LOWER = KC.TG(2)
-TODVORK = KC.DF(0)
-TOQWERT = KC.DF(1)
+TODVORK = KC.DF(1)
+TOQWERT = KC.DF(0)
 
 split = Split(
     split_type=SplitType.UART,
@@ -34,25 +34,25 @@ keyboard.modules = [layers, split]
 keyboard.extensions.append(MediaKeys())
 
 keyboard.keymap = [
+    [ #QWER
+        KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
+        KC.GRAVE, KC.N1,    KC.N2,    KC.N3,    KC.N4,    KC.N5,      KC.N6,    KC.N7,    KC.N8,    KC.N9,    KC.N0,    KC.RBRC,\
+        KC.TAB,   KC.Q,     KC.W,     KC.E,     KC.R,     KC.T,       KC.Y,     KC.U,     KC.I,     KC.O,     KC.P,     KC.LBRC,\
+        KC.ESC,   KC.A,     KC.S,     KC.D,     KC.F,     KC.G,       KC.H,     KC.J,     KC.K,     KC.L,     KC.SCLN,  KC.QUOT,\
+        KC.LSFT,  KC.Z,     KC.X,     KC.C,     KC.V,     KC.B,       KC.N,     KC.M,     KC.COMM,  KC.DOT,   KC.SLSH,  KC.RSFT,\
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LCTL,  KC.SPC,     KC.BSPC,  KC.ENT,   XXXXXXX,  KC.MINUS, KC.EQUAL, KC.RCTL,\
+                            XXXXXXX,  KC.LGUI,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,   XXXXXXX,
+    ],
     [ #base
         KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
         KC.GRAVE, KC.N1,    KC.N2,    KC.N3,    KC.N4,    KC.N5,      KC.N6,    KC.N7,    KC.N8,    KC.N9,    KC.N0,    KC.EQL,\
         KC.TAB,   KC.QUOT,  KC.COMM,  KC.DOT,   KC.P,     KC.Y,       KC.F,     KC.G,     KC.C,     KC.R,     KC.L,     KC.SLSH,\
         KC.ESC,   KC.A,     KC.O,     KC.E,     KC.U,     KC.I,       KC.D,     KC.H,     KC.T,     KC.N,     KC.S,     KC.MINS,\
         KC.LSFT,  KC.SCLN,  KC.Q,     KC.J,     KC.K,     KC.X,       KC.B,     KC.M,     KC.W,     KC.V,     KC.Z,     KC.RSFT,\
-        KC.LCTL,  KC.P1,    KC.P2,    KC.P3,    KC.LALT,  KC.SPC,     KC.BSPC,  KC.ENT,   KC.P3,    KC.LBRC,  KC.RBRC,  KC.RCTL,\
-                            TOQWERT,  KC.P7,    KC.LGUI,  KC.LALT,    KC.RALT,  RAISE,    LOWER,    KC.P9 
-    ],
-    [ #QWERTY
-        KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
-        KC.GRAVE, KC.N1,    KC.N2,    KC.N3,    KC.N4,    KC.N5,      KC.N6,    KC.N7,    KC.N8,    KC.N9,    KC.N0,    KC.EQL,\
-        KC.TAB,   KC.Q,     KC.W,     KC.E,     KC.R,     KC.T,       KC.Y,     KC.U,     KC.I,     KC.O,     KC.P,     KC.SLSH,\
-        KC.ESC,   KC.A,     KC.S,     KC.D,     KC.F,     KC.G,       KC.H,     KC.J,     KC.K,     KC.L,     KC.SCLN,  KC.MINS,\
-        KC.LSFT,  KC.Z,     KC.X,     KC.C,     KC.V,     KC.B,       KC.N,     KC.M,     KC.COMM,  KC.DOT,   KC.SLSH,  KC.RSFT,\
-        KC.LCTL,  KC.P1,    KC.P2,    KC.P3,    KC.LALT,  KC.SPC,     KC.BSPC,  KC.ENT,   KC.P3,    KC.LBRC,  KC.RBRC,  KC.RCTL,\
-                            TODVORK,  KC.P7,    KC.LGUI,  KC.LCTL,    KC.RALT,  KC.P7,    KC.P8,    KC.P9,
-    ],
-    [ #numpad?
+        XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.LCTL,  KC.SPC,     KC.BSPC,  KC.ENT,   KC.P3,    KC.LBRC,  KC.EQUAL, KC.RCTL,\
+                            XXXXXXX,  KC.LGUI,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,    KC.P7,
+     ],
+    [ #numpad, mediakeys, arrows, stuff
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
         XXXXXXX,  KC.MSTP,  KC.MPRV,  KC.MPLY,  KC.MFFD,  XXXXXXX,    TODVORK,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
         _______,  XXXXXXX,  XXXXXXX,  KC.UP,    XXXXXXX,  XXXXXXX,    TOQWERT,  KC.P7,    KC.P8,    KC.P9,    KC.PPLS,  XXXXXXX,\
