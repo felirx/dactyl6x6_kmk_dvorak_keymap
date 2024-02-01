@@ -34,7 +34,7 @@ keyboard.modules = [layers, split]
 keyboard.extensions.append(MediaKeys())
 
 keyboard.keymap = [
-    [ #QWER
+    [ #QWERTY
         KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
         KC.GRAVE, KC.N1,    KC.N2,    KC.N3,    KC.N4,    KC.N5,      KC.N6,    KC.N7,    KC.N8,    KC.N9,    KC.N0,    KC.RBRC,\
         KC.TAB,   KC.Q,     KC.W,     KC.E,     KC.R,     KC.T,       KC.Y,     KC.U,     KC.I,     KC.O,     KC.P,     KC.LBRC,\
@@ -43,14 +43,14 @@ keyboard.keymap = [
         XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LCTL,  KC.SPC,     KC.BSPC,  KC.ENT,   XXXXXXX,  KC.MINUS, KC.EQUAL, KC.RCTL,\
                             XXXXXXX,  KC.LGUI,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,   XXXXXXX,
     ],
-    [ #base
+    [ #backup dvorak if no sys support
         KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
         KC.GRAVE, KC.N1,    KC.N2,    KC.N3,    KC.N4,    KC.N5,      KC.N6,    KC.N7,    KC.N8,    KC.N9,    KC.N0,    KC.EQL,\
         KC.TAB,   KC.QUOT,  KC.COMM,  KC.DOT,   KC.P,     KC.Y,       KC.F,     KC.G,     KC.C,     KC.R,     KC.L,     KC.SLSH,\
         KC.ESC,   KC.A,     KC.O,     KC.E,     KC.U,     KC.I,       KC.D,     KC.H,     KC.T,     KC.N,     KC.S,     KC.MINS,\
         KC.LSFT,  KC.SCLN,  KC.Q,     KC.J,     KC.K,     KC.X,       KC.B,     KC.M,     KC.W,     KC.V,     KC.Z,     KC.RSFT,\
-        XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.LCTL,  KC.SPC,     KC.BSPC,  KC.ENT,   KC.P3,    KC.LBRC,  KC.EQUAL, KC.RCTL,\
-                            XXXXXXX,  KC.LGUI,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,    KC.P7,
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LCTL,  KC.SPC,     KC.BSPC,  KC.ENT,   XXXXXXX,  KC.LBRC,  KC.RBRC,  KC.RCTL,\
+                            XXXXXXX,  KC.LGUI,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,   XXXXXXX
      ],
     [ #numpad, mediakeys, arrows, stuff
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
