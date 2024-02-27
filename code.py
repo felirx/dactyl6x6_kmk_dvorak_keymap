@@ -58,7 +58,7 @@ keyboard.keymap = [
         XXXXXXX,  KC.MSTP,  KC.MPRV,  KC.MPLY,  KC.MNXT,  XXXXXXX,    TODVORK,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
         _______,  XXXXXXX,  XXXXXXX,  KC.UP,    XXXXXXX,  XXXXXXX,    TOQWERT,  KC.P7,    KC.P8,    KC.P9,    KC.PPLS,  XXXXXXX,\
         _______,  XXXXXXX,  KC.LEFT,  KC.DOWN,  KC.RGHT,  XXXXXXX,    XXXXXXX,  KC.P4,    KC.P5,    KC.P6,    KC.PPLS,  XXXXXXX,\
-        _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.PENT,  _______,\
+        _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.K,     XXXXXXX,    XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.PENT,  _______,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  _______,    _______,  _______,  KC.P0,    KC.PDOT,  KC.PENT,  _______,\
                             _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______
      ],
