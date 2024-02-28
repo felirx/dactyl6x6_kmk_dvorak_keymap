@@ -42,7 +42,7 @@ keyboard.keymap = [
         KC.ESC,   KC.A,     KC.S,     KC.D,     KC.F,     KC.G,       KC.H,     KC.J,     KC.K,     KC.L,     KC.SCLN,  KC.QUOT,\
         KC.LSFT,  KC.Z,     KC.X,     KC.C,     KC.V,     KC.B,       KC.N,     KC.M,     KC.COMM,  KC.DOT,   KC.SLSH,  KC.RSFT,\
         XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LCTL,  KC.SPC,     KC.BSPC,  KC.ENT,   XXXXXXX,  KC.MINUS, KC.EQUAL, KC.RCTL,\
-                            LOWEH,    KC.LGUI,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,   XXXXXXX,
+                            LOWEH,    XXXXXXX,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,   KC.LGUI,
     ],
     [ #backup dvorak if no sys support
         KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
@@ -51,7 +51,7 @@ keyboard.keymap = [
         KC.ESC,   KC.A,     KC.O,     KC.E,     KC.U,     KC.I,       KC.D,     KC.H,     KC.T,     KC.N,     KC.S,     KC.MINS,\
         KC.LSFT,  KC.SCLN,  KC.Q,     KC.J,     KC.K,     KC.X,       KC.B,     KC.M,     KC.W,     KC.V,     KC.Z,     KC.RSFT,\
         XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LCTL,  KC.SPC,     KC.BSPC,  KC.ENT,   XXXXXXX,  KC.LBRC,  KC.RBRC,  KC.RCTL,\
-                            LOWEH,    KC.LGUI,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,   XXXXXXX
+                            LOWEH,    XXXXXXX,  RAISE,    KC.LALT,    KC.RALT,  LOWER,    KC.DEL,   KC.LGUI
      ],
     [ #numpad, mediakeys, arrows, stuff
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
