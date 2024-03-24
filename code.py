@@ -7,6 +7,8 @@ from kmk.extensions.media_keys import MediaKeys
 from kmk.modules.layers import Layers
 from kmk.keys import KC
 from kmk.modules.split import Split, SplitType
+from kmk.modules.capsword import CapsWord
+from kmk.modules.combos import Combos, Chord
 
 keyboard = KMKKeyboard()
 
@@ -31,8 +33,15 @@ split = Split(
     uart_flip=True
 )
 
-keyboard.modules = [layers, split]
+caps_word = CapsWord()
+combos = Combos()
+
+keyboard.modules = [layers, split, caps_word]
 keyboard.extensions.append(MediaKeys())
+
+combos.combos = [
+            Chord((KC.LSFT, KC.RSFT), KC.CW)
+]
 
 keyboard.keymap = [
     [ #QWERTY
@@ -55,7 +64,7 @@ keyboard.keymap = [
      ],
     [ #numpad, mediakeys, arrows, stuff
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
-        XXXXXXX,  KC.MSTP,  KC.MPRV,  KC.MPLY,  KC.MNXT,  XXXXXXX,    XXXXXXX,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
         _______,  KC.LPRN,  KC.RPRN,  KC.UP,    KC.MINUS, KC.EQUAL,   XXXXXXX,  KC.P7,    KC.P8,    KC.P9,    KC.PPLS,  XXXXXXX,\
         _______,  KC.LCBR,  KC.LEFT,  KC.DOWN,  KC.RGHT,  KC.PIPE,    KC.CAPS,  KC.P4,    KC.P5,    KC.P6,    KC.ENT,   XXXXXXX,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.V,     KC.BSLS,    XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.PENT,  _______,\
@@ -66,7 +75,7 @@ keyboard.keymap = [
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
         XXXXXXX,  KC.INS,   KC.PSCR,  XXXXXXX,  KC.PAUS,  KC.HOME,    TODVORK,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.PGUP,    TOQWERT,  XXXXXXX,  XXXXXXX , XXXXXXX,  XXXXXXX,  XXXXXXX,\
-        _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.PGDN,    MEMES,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,\
+        _______,  KC.MSTP,  KC.MPRV,  KC.MPLY,  KC.MNXT,  KC.PGDN,    MEMES,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.END,     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  _______,    _______,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,\
                             _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______
