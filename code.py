@@ -8,7 +8,6 @@ from kmk.modules.layers import Layers
 from kmk.keys import KC
 from kmk.modules.split import Split, SplitType
 from kmk.modules.capsword import CapsWord
-from kmk.modules.combos import Combos, Chord
 
 keyboard = KMKKeyboard()
 
@@ -34,14 +33,9 @@ split = Split(
 )
 
 caps_word = CapsWord()
-combos = Combos()
 
 keyboard.modules = [layers, split, caps_word]
 keyboard.extensions.append(MediaKeys())
-
-combos.combos = [
-    Chord((KC.LSFT, KC.RSFT), KC.CW)
-]
 
 keyboard.keymap = [
     [ #QWERTY
@@ -66,7 +60,7 @@ keyboard.keymap = [
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
         XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
         _______,  KC.LPRN,  KC.RPRN,  KC.UP,    KC.MINUS, KC.EQUAL,   XXXXXXX,  KC.P7,    KC.P8,    KC.P9,    KC.PPLS,  XXXXXXX,\
-        _______,  KC.LCBR,  KC.LEFT,  KC.DOWN,  KC.RGHT,  KC.PIPE,    KC.CAPS,  KC.P4,    KC.P5,    KC.P6,    KC.ENT,   XXXXXXX,\
+        _______,  KC.LCBR,  KC.LEFT,  KC.DOWN,  KC.RGHT,  KC.PIPE,    KC.CW,    KC.P4,    KC.P5,    KC.P6,    KC.ENT,   XXXXXXX,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.V,     KC.BSLS,    XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.PENT,  _______,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  _______,    _______,  _______,  KC.P0,    KC.PDOT,  KC.PENT,  _______,\
                             _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______
