@@ -36,7 +36,7 @@ keyboard.extensions.append(MediaKeys())
 
 keyboard.keymap = [
     [ #backup dvorak if no sys support
-        KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
+        KC.F12,   KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,      KC.F6,    KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,\
         KC.GRAVE, KC.N1,    KC.N2,    KC.N3,    KC.N4,    KC.N5,      KC.N6,    KC.N7,    KC.N8,    KC.N9,    KC.N0,    KC.EQUAL,\
         KC.TAB,   KC.QUOT,  KC.COMM,  KC.DOT,   KC.P,     KC.Y,       KC.F,     KC.G,     KC.C,     KC.R,     KC.L,     KC.SLASH,\
         KC.ESC,   KC.A,     KC.O,     KC.E,     KC.U,     KC.I,       KC.D,     KC.H,     KC.T,     KC.N,     KC.S,     KC.MINS,\
