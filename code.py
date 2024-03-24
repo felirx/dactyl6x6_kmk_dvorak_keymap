@@ -40,7 +40,7 @@ keyboard.modules = [layers, split, caps_word]
 keyboard.extensions.append(MediaKeys())
 
 combos.combos = [
-            Chord((KC.LSFT, KC.RSFT), KC.CW)
+    Chord((KC.LSFT, KC.RSFT), KC.CW)
 ]
 
 keyboard.keymap = [
