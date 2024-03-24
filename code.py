@@ -7,7 +7,6 @@ from kmk.extensions.media_keys import MediaKeys
 from kmk.modules.layers import Layers
 from kmk.keys import KC
 from kmk.modules.split import Split, SplitType
-from kmk.modules.capsword import CapsWord
 
 keyboard = KMKKeyboard()
 
@@ -32,9 +31,7 @@ split = Split(
     uart_flip=True
 )
 
-caps_word = CapsWord()
-
-keyboard.modules = [layers, split, caps_word]
+keyboard.modules = [layers, split]
 keyboard.extensions.append(MediaKeys())
 
 keyboard.keymap = [
@@ -44,8 +41,8 @@ keyboard.keymap = [
         KC.TAB,   KC.Q,     KC.W,     KC.E,     KC.R,     KC.T,       KC.Y,     KC.U,     KC.I,     KC.O,     KC.P,     KC.LBRC,\
         KC.ESC,   KC.A,     KC.S,     KC.D,     KC.F,     KC.G,       KC.H,     KC.J,     KC.K,     KC.L,     KC.SCLN,  KC.QUOT,\
         KC.LSFT,  KC.Z,     KC.X,     KC.C,     KC.V,     KC.B,       KC.N,     KC.M,     KC.COMM,  KC.DOT,   KC.SLSH,  KC.RSFT,\
-        XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LALT,  KC.LGUI,  XXXXXXX,    XXXXXXX,  KC.DEL,   KC.RALT,  KC.MINUS, KC.EQUAL, KC.RCTL,\
-                            KC.LCTL,  KC.SPC,   KC.LSFT,  RAISE,      LOWER,    KC.RSFT,  KC.BSPC,  LOWEH
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LALT,  XXXXXXX,  XXXXXXX,    LOWER,    KC.DEL,   KC.RALT,  KC.MINUS, KC.EQUAL, KC.RCTL,\
+                            KC.LCTL,  KC.SPC,   KC.LSFT,  KC.LGUI,    RAISE,    KC.RSFT,  KC.BSPC,  LOWEH
      ],
     [ #backup dvorak if no sys support
         KC.F1,    KC.F2,    KC.F3,    KC.F4,    KC.F5,    KC.F6,      KC.F7,    KC.F8,    KC.F9,    KC.F10,   KC.F11,   KC.F12,\
@@ -53,14 +50,14 @@ keyboard.keymap = [
         KC.TAB,   KC.QUOT,  KC.COMM,  KC.DOT,   KC.P,     KC.Y,       KC.F,     KC.G,     KC.C,     KC.R,     KC.L,     KC.SLASH,\
         KC.ESC,   KC.A,     KC.O,     KC.E,     KC.U,     KC.I,       KC.D,     KC.H,     KC.T,     KC.N,     KC.S,     KC.MINS,\
         KC.LSFT,  KC.SCLN,  KC.Q,     KC.J,     KC.K,     KC.X,       KC.B,     KC.M,     KC.W,     KC.V,     KC.Z,     KC.RSFT,\
-        XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LALT,  KC.LGUI,  XXXXXXX,    XXXXXXX,  KC.DEL,   KC.RALT,  KC.LBRC,  KC.RBRC,  KC.RCTL,\
-                            KC.LCTL,  KC.SPC,   KC.LSFT,  RAISE,      LOWER,    KC.RSFT,  KC.BSPC,  LOWEH
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LALT,  XXXXXXX,  XXXXXXX,    LOWER,    KC.DEL,   KC.RALT,  KC.LBRC,  KC.RBRC,  KC.RCTL,\
+                            KC.LCTL,  KC.SPC,   KC.LSFT,  KC.LGUI,    RAISE,    KC.RSFT,  KC.BSPC,  LOWEH
      ],
     [ #numpad, mediakeys, arrows, stuff
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
         XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
         _______,  KC.LPRN,  KC.RPRN,  KC.UP,    KC.MINUS, KC.EQUAL,   XXXXXXX,  KC.P7,    KC.P8,    KC.P9,    KC.PPLS,  XXXXXXX,\
-        _______,  KC.LCBR,  KC.LEFT,  KC.DOWN,  KC.RGHT,  KC.PIPE,    KC.CW,    KC.P4,    KC.P5,    KC.P6,    KC.ENT,   XXXXXXX,\
+        _______,  KC.LCBR,  KC.LEFT,  KC.DOWN,  KC.RGHT,  KC.PIPE,    KC.CAPS,  KC.P4,    KC.P5,    KC.P6,    KC.ENT,   XXXXXXX,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.V,     KC.BSLS,    XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.PENT,  _______,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  _______,    _______,  _______,  KC.P0,    KC.PDOT,  KC.PENT,  _______,\
                             _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______
