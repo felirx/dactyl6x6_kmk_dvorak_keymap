@@ -50,13 +50,13 @@ keyboard.keymap = [
         KC.TAB,   KC.Q,     KC.W,     KC.E,     KC.R,     KC.T,       KC.Y,     KC.U,     KC.I,     KC.O,     KC.P,     KC.LBRC,\
         KC.ESC,   KC.A,     KC.S,     KC.D,     KC.F,     KC.G,       KC.H,     KC.J,     KC.K,     KC.L,     KC.SCLN,  KC.QUOT,\
         KC.LSFT,  KC.Z,     KC.X,     KC.C,     KC.V,     KC.B,       KC.N,     KC.M,     KC.COMM,  KC.DOT,   KC.SLSH,  KC.RSFT,\
-        XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LALT,  XXXXXXX,  XXXXXXX,    LOWER,    KC.DEL,   KC.RALT,  KC.MINUS, KC.EQUAL, KC.RCTL,\
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  KC.LALT,  XXXXXXX,  XXXXXXX,    LOWER,    KC.DEL,   KC.RALT,  XXXXXXX,  XXXXXXX,  KC.RCTL,\
                             KC.LCTL,  KC.SPC,   KC.LSFT,  KC.LGUI,    RAISE,    KC.RSFT,  KC.BSPC,  LOWEH
      ],
     [ #numpad, mediakeys, arrows, stuff
         _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,\
-        XXXXXXX,  XXXXXXX,  KC.LPRN,  XXXXXXX,  KC.RPRN,  XXXXXXX,    KC.CAPS,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
-        _______,  KC.EQUAL, KC.LBRC,  KC.UP,    KC.RBRC,  XXXXXXX,    XXXXXXX,  KC.P7,    KC.P8,    KC.P9,    KC.PPLS,  XXXXXXX,\
+        XXXXXXX,  XXXXXXX,  KC.LPRN,  KC.EQUAL, KC.RPRN,  XXXXXXX,    KC.CAPS,  XXXXXXX,  KC.PSLS,  KC.PAST,  KC.PMNS,  XXXXXXX,\
+        _______,  XXXXXXX,  KC.LBRC,  KC.UP,    KC.RBRC,  XXXXXXX,    XXXXXXX,  KC.P7,    KC.P8,    KC.P9,    KC.PPLS,  XXXXXXX,\
         _______,  XXXXXXX,  KC.LEFT,  KC.DOWN,  KC.RGHT,  KC.PIPE,    XXXXXXX,  KC.P4,    KC.P5,    KC.P6,    KC.ENT,   XXXXXXX,\
         _______,  XXXXXXX,  KC.LCBR,  XXXXXXX,  KC.RCBR,  KC.BSLS,    XXXXXXX,  KC.P1,    KC.P2,    KC.P3,    KC.PENT,  _______,\
         _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  _______,    _______,  _______,  KC.P0,    KC.PDOT,  KC.PENT,  _______,\
